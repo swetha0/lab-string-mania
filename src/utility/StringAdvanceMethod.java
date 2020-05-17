@@ -1,5 +1,7 @@
 package utility;
 
+import java.util.Arrays;
+
 public class StringAdvanceMethod {
 	private String input1;
 	private String input2;
@@ -25,9 +27,14 @@ public class StringAdvanceMethod {
 		return output;
 	}
 
-	public String split(String input1, String input2) {
+	public String split (String input1, String input2) {
 		String output[] = input1.split(input2);
-		return output[0] + "  " + output[1];
+		String output1 = null;
+		for(int i=0; i< output.length ; i++)
+		{
+			output1 = Arrays.deepToString(output);
+		}
+		return output1;
 	}
 
 	public String indexOf(String input1, String input2) {
